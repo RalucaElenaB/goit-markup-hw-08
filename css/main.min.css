@@ -198,10 +198,6 @@ body {
     width: 480px;
     height: 60px;
   }
-  .list-contacts-menu,
-  .list-pages-menu {
-    display: none;
-  }
 }
 /* Tablet 481px- 768px */
 @media screen and (min-width: 768px) {
@@ -212,6 +208,9 @@ body {
   .list-contacts-menu,
   .list-pages-menu {
     display: flex;
+  }
+  .nav {
+    display: none;
   }
 }
 /* Desktop SCSS 769px- 1200px */
