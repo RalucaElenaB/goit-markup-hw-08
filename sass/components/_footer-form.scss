@@ -1,0 +1,73 @@
+/* Newsletter- footer */
+
+/* Mobil 320px- 480px */
+@media screen and (min-width: $mobil-breakpoint) {
+}
+
+/* Tablet 481px 768px */
+@media screen and (min-width: $tablet-breakpoint) {
+}
+
+/* Desktop SCSS 769px- 1200px */
+@media screen and (min-width: $desktop-breakpoint) {
+}
+
+.footer-form {
+  margin-left: 110px;
+}
+
+.footer__form .footer-form__info {
+  margin-top: 20px;
+}
+
+.footer-form__input {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding: 15px;
+  width: 358px;
+
+  &:focus {
+    color: white;
+  }
+}
+
+.footer-form__button {
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  border: none;
+  color: white;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    background: #1a78c5;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.footer-form__info {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-form__title {
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}

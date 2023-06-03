@@ -1,0 +1,30 @@
+/* variabile scss*/
+$mobil-breakpoint: 480px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1200px;
+
+:root {
+  /* font text */
+  --logo-font: "Raleway", sans-serif; /* logo */
+  --site-font: "Roboto", sans-serif; /* texte site */
+  /* color text */
+  --color-one: #212121; /* navigation-pages, h3 */
+  --color-two: #757575; /* p, tel-header  */
+  --color-fhree: #2196f3; /* logo-header */
+  --color-four: #ffffff; /* h1, text-buttons, logo-footer,   */
+  --color-five: #000000;
+  --footer-adresss-color: #ffff00;
+  /* background color */
+  --background-color-one: #2f303a; /* hero, footer  */
+  --background-color-two: #e5e5e5; /* Benefits section, What we do section, Buttons&Products sections */
+  --background-color-fhree: #f5f4fa; /* Our team section  */
+  --background-color-four: #2196f3; /* hero button,  portofolio buttons  */
+  --header-border-color: #ececec;
+  --item-product: 30px;
+  --border-card: #eeeeee;
+  --social-icon-color: #afb1b8;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* breakpoints asa nu vor fi citite */
+  // --tablet-breakpoint: 481px;
+  // --desktop-breakpoint: 769px;
+}

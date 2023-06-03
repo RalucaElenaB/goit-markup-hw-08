@@ -1,0 +1,58 @@
+/* What we do section */
+
+/* Mobil 320px- 480px */
+@media screen and (min-width: $mobil-breakpoint) {
+}
+
+/* Tablet 481px 768px */
+@media screen and (min-width: $tablet-breakpoint) {
+}
+
+/* Desktop SCSS 769px- 1200px */
+@media screen and (min-width: $desktop-breakpoint) {
+}
+
+.do__list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.do__heading {
+  color: var(--color-one);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  /* margin-top: 94px; */
+  display: flex;
+  justify-content: center;
+  /* padding-right: 215px; */
+}
+
+.do__item {
+  position: relative;
+}
+
+.do__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 5px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 370px;
+  min-height: 70px;
+  text-align: center;
+  color: var(--color-four);
+  background: rgba(47, 48, 58, 0.8);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  line-height: 16px;
+  font-weight: 700px;
+}

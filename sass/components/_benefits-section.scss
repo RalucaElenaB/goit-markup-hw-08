@@ -1,0 +1,78 @@
+/* Benefits section */
+
+/* Mobil 320px- 480px */
+@media screen and (min-width: $mobil-breakpoint) {
+}
+
+/* Tablet 481px 768px */
+@media screen and (min-width: $tablet-breakpoint) {
+}
+
+/* Desktop SCSS 769px- 1200px */
+@media screen and (min-width: $desktop-breakpoint) {
+}
+
+.benefits,
+.do {
+  background-color: var(--color-four);
+  display: flex;
+}
+
+.benefits {
+  margin-top: 94px;
+  margin-bottom: 94px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-left: 215px; */
+}
+
+.benefits__list {
+  display: flex;
+}
+
+.benefits__item {
+  margin-right: 24px;
+  flex-basis: calc((100% - 72px) / 4);
+  width: 270px;
+}
+
+.benefits__title {
+  color: var(--color-one);
+  /* text-transform: uppercase; */
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 2.142;
+  letter-spacing: 0.03em;
+  text-align: left;
+  width: 270px;
+  height: 16px;
+  left: 815px;
+  top: 774px;
+  margin-bottom: 10px;
+}
+
+.benefits__text {
+  color: var(--color-two);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.72;
+  letter-spacing: 0.03em;
+  text-align: left;
+  width: 270px;
+  height: 75px;
+  left: 815px;
+  top: 800px;
+}
+
+.benefits__icons {
+  background: var(--background-color-fhree);
+  width: 270px;
+  height: 120px;
+}
+.benefits__icon {
+  width: 70px;
+  height: 70px;
+  margin-top: 25px;
+  margin-left: 100px;
+  fill: currentColor;
+}
