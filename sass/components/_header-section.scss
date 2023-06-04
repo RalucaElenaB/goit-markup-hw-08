@@ -1,6 +1,18 @@
-/* Header section */
+/* HEADER SECTION */
+
+/* Mobil pana la 480px */
+
+/* Tablet de la 481px pana la 1200px */
+@media screen and (min-width: $tablet-breakpoint) {
+}
+
+/* Desktop SCSS peste 1200px */
+@media screen and (min-width: $desktop-breakpoint) {
+}
 
 .header {
+  width: 1600px;
+  height: 80px;
   background-color: var(--color-four);
   border-bottom: 1px solid #ececec;
   display: flex;
@@ -18,6 +30,18 @@
   display: flex;
   align-items: center;
   font-weight: bold;
+
+  &.is-open {
+    display: flex;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    right: 0;
+    max-width: 60%;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 60px 40px;
+  }
 }
 
 /* .nav-menu .contacts-menu li + li {
@@ -124,45 +148,4 @@
 
 .current--link {
   color: var(--color-fhree);
-}
-
-/* Mobil 320px- 480px */
-@media screen and (min-width: $mobil-breakpoint) {
-  .header {
-    width: 480px;
-    height: 60px;
-  }
-
-  //   .list-contacts-menu,
-  //   .list-pages-menu {
-  //     display: none;
-  //   }
-}
-
-/* Tablet 481px- 768px */
-@media screen and (min-width: $tablet-breakpoint) {
-  .header {
-    width: 768px;
-    height: 80px;
-  }
-  .list-contacts-menu,
-  .list-pages-menu {
-    display: flex;
-  }
-
-  .nav {
-    display: none;
-  }
-}
-
-/* Desktop SCSS 769px- 1200px */
-@media screen and (min-width: $desktop-breakpoint) {
-  .header {
-    width: 768px;
-    height: 80px;
-  }
-  .list-contacts-menu,
-  .list-pages-menu {
-    display: flex;
-  }
 }

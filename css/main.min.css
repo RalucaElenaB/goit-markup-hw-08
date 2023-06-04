@@ -21,7 +21,6 @@
   --border-card: #eeeeee;
   --social-icon-color: #afb1b8;
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* breakpoints asa nu vor fi citite */
 }
 
 html {
@@ -63,14 +62,30 @@ body {
   color: var(--color-one);
 }
 
+/* Mobil pana la 480px */
 .container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 480px;
 }
 
-/* Header section */
+/* Tablet de la 481px pana la 1200px */
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 768px; /* Maximul pentru tableta */
+  }
+}
+/* Desktop SCSS peste 1200px */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1600px; /* Maximul pentru tableta */
+  }
+}
+/* HEADER SECTION */
+/* Mobil pana la 480px */
+/* Tablet de la 481px pana la 1200px */
+/* Desktop SCSS peste 1200px */
 .header {
+  width: 1600px;
+  height: 80px;
   background-color: var(--color-four);
   border-bottom: 1px solid #ececec;
   display: flex;
@@ -88,6 +103,17 @@ body {
   display: flex;
   align-items: center;
   font-weight: bold;
+}
+.nav.is-open {
+  display: flex;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  right: 0;
+  max-width: 60%;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 60px 40px;
 }
 
 /* .nav-menu .contacts-menu li + li {
@@ -192,42 +218,10 @@ body {
   color: var(--color-fhree);
 }
 
-/* Mobil 320px- 480px */
-@media screen and (min-width: 480px) {
-  .header {
-    width: 480px;
-    height: 60px;
-  }
-}
-/* Tablet 481px- 768px */
-@media screen and (min-width: 768px) {
-  .header {
-    width: 768px;
-    height: 80px;
-  }
-  .list-contacts-menu,
-  .list-pages-menu {
-    display: flex;
-  }
-  .nav {
-    display: none;
-  }
-}
-/* Desktop SCSS 769px- 1200px */
-@media screen and (min-width: 1200px) {
-  .header {
-    width: 768px;
-    height: 80px;
-  }
-  .list-contacts-menu,
-  .list-pages-menu {
-    display: flex;
-  }
-}
-/* Modal- hero- section */
-/* Mobil 320px- 480px */
-/* Tablet 481px 768px */
-/* Desktop SCSS 769px- 1200px */
+/* HERO SECTION */
+/* Mobil pana la 480px */
+/* Tablet de la 481px pana la 1200px */
+/* Desktop SCSS peste 1200px */
 .hero,
 .footer {
   background-color: var(--background-color-one);
@@ -286,80 +280,72 @@ body {
   margin-top: 10px;
 }
 
-/* Benefits section */
-/* Mobil 320px- 480px */
-/* Tablet 481px 768px */
-/* Desktop SCSS 769px- 1200px */
-.benefits,
-.do {
-  background-color: var(--color-four);
-  display: flex;
-}
-
+/* BENEFITS SECTION */
+/* Mobil pana la 480px */
 .benefits {
   margin-top: 94px;
   margin-bottom: 94px;
-  margin-left: auto;
-  margin-right: auto;
-  /* margin-left: 215px; */
-}
-
-.benefits__list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .benefits__item {
-  margin-right: 24px;
-  flex-basis: calc((100% - 72px) / 4);
-  width: 270px;
+  margin-bottom: 24px;
+  flex-basis: calc((100% - 48px) / 2);
+  max-width: calc((100% - 48px) / 2);
 }
 
-.benefits__title {
-  color: var(--color-one);
-  /* text-transform: uppercase; */
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 2.142;
-  letter-spacing: 0.03em;
-  text-align: left;
-  width: 270px;
-  height: 16px;
-  left: 815px;
-  top: 774px;
-  margin-bottom: 10px;
-}
-
+.benefits__title,
 .benefits__text {
-  color: var(--color-two);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.72;
-  letter-spacing: 0.03em;
-  text-align: left;
-  width: 270px;
-  height: 75px;
-  left: 815px;
-  top: 800px;
+  text-align: center;
 }
 
 .benefits__icons {
-  background: var(--background-color-fhree);
-  width: 270px;
-  height: 120px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .benefits__icon {
   width: 70px;
   height: 70px;
-  margin-top: 25px;
-  margin-left: 100px;
+  margin: 0 auto;
   fill: currentColor;
 }
 
-/* What we do section */
-/* Mobil 320px- 480px */
-/* Tablet 481px 768px */
-/* Desktop SCSS 769px- 1200px */
+@media (max-width: 480px) {
+  .benefits {
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+  }
+  .benefits__item {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .benefits__title,
+  .benefits__text {
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .benefits__item {
+    flex-basis: calc((100% - 24px) / 2);
+    max-width: calc((100% - 24px) / 2);
+  }
+}
+@media (min-width: 769px) {
+  .benefits {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* WHAT WE DO SECTION */
+/* Mobil pana la 480px */
+/* Tablet de la 481px pana la 1200px */
+/* Desktop SCSS peste 1200px */
 .do__list {
   display: flex;
   justify-content: center;
@@ -405,10 +391,10 @@ body {
   font-weight: 700px;
 }
 
-/* Our team section */
-/* Mobil 320px- 480px */
-/* Tablet 481px 768px */
-/* Desktop SCSS 769px- 1200px */
+/* TEAM SECTION */
+/* Mobil pana la 480px */
+/* Tablet de la 481px pana la 1200px */
+/* Desktop SCSS peste 1200px */
 .team {
   background-color: var(--background-color-fhree);
   width: 70%;
@@ -526,10 +512,10 @@ body {
   border-radius: 50%;
 }
 
-/* Regular customers section */
-/* Mobil 320px- 480px */
-/* Tablet 481px 768px */
-/* Desktop SCSS 769px- 1200px */
+/* REGULAR CUSTOMERS SECTION */
+/* Mobil pana la 480px */
+/* Tablet de la 481px pana la 1200px */
+/* Desktop SCSS peste 1200px */
 .customers {
   display: flex;
 }
@@ -571,10 +557,10 @@ body {
   color: var(--color-one);
 }
 
-/* Footer section */
-/* Mobil 320px- 480px */
-/* Tablet 481px 768px */
-/* Desktop SCSS 769px- 1200px */
+/* FOOTER SECTION */
+/* Mobil pana la 480px */
+/* Tablet de la 481px pana la 1200px */
+/* Desktop SCSS peste 1200px */
 .footer {
   width: 1600px;
   margin-left: auto;
@@ -665,10 +651,10 @@ body {
   text-transform: uppercase;
 }
 
-/* Portofolio page- buttons-section */
-/* Mobil 320px- 480px */
-/* Tablet 481px 768px */
-/* Desktop SCSS 769px- 1200px */
+/* PORTOFOLIO PAGE- BUTTONS SECTION  */
+/* Mobil pana la 480px */
+/* Tablet de la 481px pana la 1200px */
+/* Desktop SCSS peste 1200px */
 .portofolio {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -724,10 +710,10 @@ body {
   transition: var(--transition);
 }
 
-/* Portofolio page- products-section */
-/* Mobil 320px- 480px */
-/* Tablet 481px 768px */
-/* Desktop SCSS 769px- 1200px */
+/* PRODUCTS SECTION PORTOFOLIO PAGE */
+/* Mobil pana la 480px */
+/* Tablet de la 481px pana la 1200px */
+/* Desktop SCSS peste 1200px */
 .product {
   display: flex;
   margin-top: 50px;
@@ -855,10 +841,10 @@ body {
   text-align: left;
 }
 
-/* Modal- hero- section */
-/* Mobil 320px- 480px */
-/* Tablet 481px 768px */
-/* Desktop SCSS 769px- 1200px */
+/* MODAL HERO SECTION*/
+/* Mobil pana la 480px */
+/* Tablet de la 481px pana la 1200px */
+/* Desktop SCSS peste 1200px */
 .modal {
   position: fixed;
   top: 0;
@@ -1044,10 +1030,10 @@ body {
   width: 11px;
   height: 11px;
 } */
-/* Newsletter- footer */
-/* Mobil 320px- 480px */
-/* Tablet 481px 768px */
-/* Desktop SCSS 769px- 1200px */
+/* NEWSLETTER FOOTER */
+/* Mobil pana la 480px */
+/* Tablet de la 481px pana la 1200px */
+/* Desktop SCSS peste 1200px */
 .footer-form {
   margin-left: 110px;
 }

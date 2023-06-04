@@ -1,7 +1,7 @@
 /* variabile scss*/
-$mobil-breakpoint: 480px;
-$tablet-breakpoint: 768px;
-$desktop-breakpoint: 1200px;
+$mobil-breakpoint: 320px;
+$tablet-breakpoint: 480px;
+$desktop-breakpoint: 768px;
 
 :root {
   /* font text */
@@ -24,7 +24,4 @@ $desktop-breakpoint: 1200px;
   --border-card: #eeeeee;
   --social-icon-color: #afb1b8;
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* breakpoints asa nu vor fi citite */
-  // --tablet-breakpoint: 481px;
-  // --desktop-breakpoint: 769px;
 }
